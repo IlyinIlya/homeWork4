@@ -10,12 +10,10 @@ public class Main {
         // формате: «Если возраст человека равен …, то (вывести в зависимости от результата)
         // он совершеннолетний / он не достиг совершеннолетия, нужно немного подождать».
         int agePerson = 19;
-        boolean ageDoesNotMatch = agePerson < 18;
-        boolean ageMatch = agePerson >= 18;
-        if (ageMatch) {
+        if (agePerson >= 18) {
             System.out.println("Если возраст человека равен " + agePerson + " то он совершеннолетний");
         }
-        if (ageDoesNotMatch) {
+        if (agePerson < 18) {
             System.out.println("Если возраст человека равен " + agePerson + " он не достиг совершеннолетия, " +
                     "нужно немного подождать");
         }
@@ -43,12 +41,10 @@ public class Main {
         // вывести в зависимости от результата) придется заплатить штраф / можно ездить спокойно».
         int speed = 70;
         int speedLine = 60;
-        boolean speedLevelLow = speed < speedLine;
-        boolean speedLevelHigh = speed > speedLine;
-        if (speedLevelLow) {
+        if (speed < speedLine) {
             System.out.println("Если скорость " + speed + " км/ч то, можно ездить спокойно");
         }
-        if (speedLevelHigh) {
+        if (speed > speedLine) {
             System.out.println("Если скорость " + speed + " км/ч то, придётся заплатить штраф");
         }
 
