@@ -9,15 +9,14 @@ public class Main {
         //При выполнении каждого условия программа должна выводить в консоль сообщение в
         // формате: «Если возраст человека равен …, то (вывести в зависимости от результата)
         // он совершеннолетний / он не достиг совершеннолетия, нужно немного подождать».
-        int agePerson1 = 17;
-        int agePerson2 = 19;
-        boolean ageDoesNotMatch = agePerson1 < 18;
-        boolean ageMatch = agePerson2 >= 18;
+        int agePerson = 19;
+        boolean ageDoesNotMatch = agePerson < 18;
+        boolean ageMatch = agePerson >= 18;
         if (ageMatch) {
-            System.out.println("Если возраст человека равен " + agePerson2 + " то он совершеннолетний");
+            System.out.println("Если возраст человека равен " + agePerson + " то он совершеннолетний");
         }
         if (ageDoesNotMatch) {
-            System.out.println("Если возраст человека равен " + agePerson1 + " он не достиг совершеннолетия, " +
+            System.out.println("Если возраст человека равен " + agePerson + " он не достиг совершеннолетия, " +
                     "нужно немного подождать");
         }
 
@@ -28,13 +27,12 @@ public class Main {
         //При выполнении каждого условия выведите в консоль: «На улице … градусов, (вывести в зависимости от
         // результата) нужно надеть шапку / можно идти без шапки».
         int temperatureLine = 5;
-        int temperatureOutside1 = 18;
-        int temperatureOutside2 = -5;
-        if (temperatureOutside1 > temperatureLine) {
-            System.out.println("На улице " + temperatureOutside1 + " градусов, можно идти без шапки");
+        int temperatureOutside = 7;
+        if (temperatureOutside > temperatureLine) {
+            System.out.println("На улице " + temperatureOutside + " градусов, можно идти без шапки");
         }
-        if (temperatureOutside2 < temperatureLine) {
-            System.out.println("На улице " + temperatureOutside2 + " градусов, нужно одеть шапку");
+        if (temperatureOutside < temperatureLine) {
+            System.out.println("На улице " + temperatureOutside + " градусов, нужно одеть шапку");
         }
 
         System.out.println("Задача №3");
@@ -43,16 +41,15 @@ public class Main {
         // превышения скорости нет, если она меньше 60 км/ч.
         //При выполнении каждого условия программа должна выводить такое сообщение: «Если скорость …, то (
         // вывести в зависимости от результата) придется заплатить штраф / можно ездить спокойно».
-        int speed1 = 40;
-        int speed2 = 70;
+        int speed = 70;
         int speedLine = 60;
-        boolean speedLevelLow = speed1 < speedLine;
-        boolean speedLevelHigh = speed2 > speedLine;
+        boolean speedLevelLow = speed < speedLine;
+        boolean speedLevelHigh = speed > speedLine;
         if (speedLevelLow) {
-            System.out.println("Если скорость " + speed1 + " км/ч то, можно ездить спокойно");
+            System.out.println("Если скорость " + speed + " км/ч то, можно ездить спокойно");
         }
         if (speedLevelHigh) {
-            System.out.println("Если скорость " + speed2 + " км/ч то, придётся заплатить штраф");
+            System.out.println("Если скорость " + speed + " км/ч то, придётся заплатить штраф");
         }
 
         System.out.println("Задача №4");
@@ -63,23 +60,21 @@ public class Main {
         // А если человеку больше 24, то ему пора ходить на работу.
         //При выполнении каждого условия программа должна выводить в консоль сообщение в формате: «Если возраст
         // человека равен …, то ему нужно ходить … (в зависимости от возраста дописать нужное)».
-        int ageStudent = 4;
+        int ageStudent = 19;
         if (ageStudent > 2 && ageStudent < 6) {
             System.out.println("Если возраст человека равен " + ageStudent + ", то ему нужно ходить в детский сад");
         }
-        ageStudent = 14;
         if (ageStudent > 7 && ageStudent < 17) {
             System.out.println("Если возраст человека равен " + ageStudent + ", то ему нужно ходить в школу");
         }
-        ageStudent = 24;
         if (ageStudent >= 18 && ageStudent <= 24) {
             System.out.println("Если возраст человека равен " + ageStudent + ", то его место в университете");
         }
-        ageStudent = 34;
         if (ageStudent > 24) {
             System.out.println("Если возраст человека равен " + ageStudent + ", то ему пора ходить на работу");
+        } else {
+            System.out.println("Еще рано ходить в какое либо учреждение");
         }
-
         System.out.println("Задача №5");
         //Как правило, на аттракционах действуют ограничения для детей по возрасту:
         // Если ребенку меньше 5 лет, то он не может кататься на аттракционе.
@@ -89,26 +84,21 @@ public class Main {
         //Напишите программу, которая выводит в консоль сообщение в формате: «Если возраст ребенка равен …,
         // то ему … (в зависимости от возраста дописать нужное: нельзя кататься на аттракционе, можно кататься
         // на аттракционе в сопровождении / без сопровождения взрослого)».
-        int ageChild1 = 3;
-        int ageChild2 = 7;
-        int ageChild3 = 17;
-        boolean noParents = false;
-        boolean ageLimit1 = ageChild1 < 5;
-        boolean ageLimit2 = (ageChild2 > 5 || ageChild2 < 14);
-        boolean ageLimit3 = ageChild3 >= 14;
-        if (ageLimit1) {
-            System.out.println("Если возраст ребенка равен " + ageChild1 +
+        int ageChild = 13;
+        int noParents = 1;
+        if (ageChild < 5 && noParents > 0) {
+            System.out.println("Если возраст ребенка равен " + ageChild +
                     ", то он не может кататься на атракционе");
         }
-        if (ageLimit2) {
-            System.out.println("Если возраст ребенка равен " + ageChild2 +
+        if (ageChild > 5 && ageChild < 14 && noParents > 0) {
+            System.out.println("Если возраст ребенка равен " + ageChild +
                     ", то он может кататься на атракционе в сопровождении взрослого");
         }
-        if (!noParents) {
+        if (noParents == 0 && ageChild < 14) {
             System.out.println("Если взрослого нет, то кататься нельзя");
         }
-        if (ageLimit3) {
-            System.out.println("Если возраст ребенка равен " + ageChild3 + ", " +
+        if (ageChild >= 14) {
+            System.out.println("Если возраст ребенка равен " + ageChild + ", " +
                     "то он может кататься на атракционе без сопровождения взрослого");
         }
 
@@ -119,24 +109,18 @@ public class Main {
         int trainCarriage = 102;
         int seatSitTrainCarriage = 60;
         int ticketCalc;
-        int ticket = 40;
+        int ticket = 88;
         if (ticket < seatSitTrainCarriage) {
             ticketCalc = seatSitTrainCarriage - ticket;
             System.out.println("Если билетов продано: " + ticket +
                     ", то вагоне осталось " + ticketCalc + " сидячих мест");
         }
-        ticket = 71;
-        if ((ticket > seatSitTrainCarriage) && (ticket <= trainCarriage)) {
-            ticketCalc = trainCarriage - ticket;
-            System.out.println("Если билетов продано: " + ticket +
+        else if ((ticket > seatSitTrainCarriage) && (ticket <= trainCarriage)) {
+                ticketCalc = trainCarriage - ticket;
+                System.out.println("Если билетов продано: " + ticket +
                     ", то в вагоне не осталось сидячих мест, но осталось " + ticketCalc + " стоячих мест");
         }
-        ticket = 105;
-        if ((ticket > seatSitTrainCarriage) && (ticket <= trainCarriage)) {
-            ticketCalc = trainCarriage - ticket;
-            System.out.println("Если билетов продано: " + ticket +
-                    ", то в вагоне не осталось сидячих мест, но осталось " + ticketCalc + " стоячих мест");
-        } else {
+        else {
             System.out.println("Билетов не может быть продано больше чем " + trainCarriage + ". Вагон полностью забит");
         }
 
@@ -152,7 +136,6 @@ public class Main {
         int three = 9;
         boolean resultOne = (one > two) && (one > three);
         boolean resultTwo = (two > one) && (two > three);
-        boolean resultThree = (three > one) && (three > two);
 
         if (resultOne || resultTwo) {
             if (resultOne) {
